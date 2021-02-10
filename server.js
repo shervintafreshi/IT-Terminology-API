@@ -8,7 +8,6 @@ const path = require("path");
 const bodyParser = require('body-parser');
 const app = express();
 const HTTP_PORT = process.env.PORT || 8080;
-// Or use some other port number that you like better
 
 // Add support for incoming JSON entities
 app.use(bodyParser.json());
