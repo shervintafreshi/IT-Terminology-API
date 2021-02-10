@@ -34,12 +34,10 @@ app.get("/", (req, res) => {
 // Resources available in this web API
 
 app.get("/api", (req, res) => {
-  // Here are the resources that are available for users of this web API...
   const links = [];
-  // This app's resources...
   links.push({ "rel": "collection", "href": "/api/terms", "methods": "GET,POST,PUT" });
   const linkObject = { 
-    "apiName": "terms Web API",
+    "apiName": "Terms Web API",
     "apiDescription": "assignment 2 web-api",
     "apiVersion": "1.0", 
     "apiAuthor": "Shervin Tafreshipour",
@@ -268,8 +266,7 @@ app.use((req, res) => {
 });
 
 // ################################################################################
-// Attempt to connect to the database, and
-// tell the app to start listening for requests
+// Attempt to connect to the database
 
 m.connect().then(() => {
   app.listen(HTTP_PORT, () => { console.log("Ready to handle requests on port " + HTTP_PORT) });
